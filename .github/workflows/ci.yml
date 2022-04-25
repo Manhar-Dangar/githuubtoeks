@@ -41,6 +41,5 @@ jobs:
     - name: Push
       if: github.ref == 'refs/heads/main'
       run: |
-        # Push image to AWS ECR
         docker tag myrepo:latest public.ecr.aws/n9h0p1o6/myrepo:latest
         docker push public.ecr.aws/n9h0p1o6/myrepo:latest
