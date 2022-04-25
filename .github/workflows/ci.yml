@@ -23,7 +23,7 @@ jobs:
     - name: Setup ECR
       run: |
         # Login to AWS ECR
-        $( aws ecr-public get-login-password --region ap-south-1 | docker login --username AWS --password-stdin public.ecr.aws )
+        $( aws ecr-public get-login-password --region ap-south-1 | docker login --username AWS --password-stdin public.ecr.aws/n9h0p1o6/myrepo )
 
     - name: Build and tag the image
       run: |
