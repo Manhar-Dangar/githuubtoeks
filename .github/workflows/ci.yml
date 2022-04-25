@@ -39,7 +39,7 @@ jobs:
           -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_IMAGE ./app
  
     - name: Push
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/master'
       run: |
         docker tag $CONTAINER_IMAGE public.ecr.aws/n9h0p1o6/myrepo:latest
         docker push public.ecr.aws/n9h0p1o6/myrepo:latest
