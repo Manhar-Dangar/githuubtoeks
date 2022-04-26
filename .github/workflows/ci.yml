@@ -4,7 +4,7 @@ on:
 jobs:
   job1:
     runs-on: self-hosted
-    name: build example and deploy to minikube
+    name: build app and deploy to minikube
     steps:
     - uses: actions/checkout@v2
     - name: Try the cluster !
@@ -15,7 +15,7 @@ jobs:
         pwd
         ls
         eval $(minikube -p minikube docker-env)
-        docker build -t dipak ./app/
+        docker build -t man ./app/
         echo -n "verifying images:"
         docker images        
     - name: Deploy to minikube
