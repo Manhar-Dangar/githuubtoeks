@@ -20,4 +20,4 @@ jobs:
         docker images        
     - name: Deploy to minikube
       run:
-        kubectl apply -f menifest.yml 
+        kubectl apply -f menifest.yml
