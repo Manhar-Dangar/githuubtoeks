@@ -8,10 +8,10 @@ jobs:
     steps:
     - name: delete pervious deploy
       run: kubectl delete deploy example
+    - name: delete pervious service
+      run: kubectl delete service example
     - name: delete pervious ingress
       run: kubectl delete example-ingress
-    - name: delete pervious service
-      run: kubectl delete service example-ingress
     - uses: actions/checkout@v2
     - name: Try the cluster !
       run: kubectl get pods -A
