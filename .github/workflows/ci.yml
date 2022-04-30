@@ -9,6 +9,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Try the cluster !
       run: kubectl get pods -A
+    - name: Delete pervious deployment
+      run: kubectl delete deploy example
     - name: Build image
       run: |
         export SHELL=/bin/bash
